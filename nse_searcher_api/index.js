@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import morgan from "morgan"
 import connect from './config/db.js'
+import userRouter from './routers/User.js'
 
 const app = express()
 
@@ -15,6 +16,9 @@ dotenv.config({ path: './config/config.env' })
 
 // DB connection
 connect()
+
+// Routers
+app.use('/', userRouter)
 
 // server
 app.listen(process.env.PORT, () => { console.log("server is running on port 8888") })
