@@ -14,6 +14,11 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 dotenv.config({ path: './config/config.env' })
 
+// loggers
+if (process.env.NODE_ENV === 'DEV') {
+    app.use(morgan("dev"))
+}
+
 // DB connection
 connect()
 

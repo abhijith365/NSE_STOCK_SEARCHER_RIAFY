@@ -16,7 +16,7 @@ export const findNse = async (req, res, next) => {
     try {
         const Name = req.params.name;
         const data = await NseList.find(
-            { Name: { $regex: Name + '.*', $options: 'i' } }
+            { Name: { $regex: '^' + Name, $options: 'i' } }
         ).limit(5);
         res.status(200).json(data)
 

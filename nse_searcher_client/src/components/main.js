@@ -16,21 +16,14 @@ export const Main = () => {
     const slDataHandler = (id) => {
         setSearchData([])
         setDataId(id)
+        axios.get(`http://127.0.0.1:8888/stock/${dataId}`).then(res => setSingleData(res.data))
+
     }
 
     useEffect(() => {
-        const fetchData = async () => {
-
-            try {
-                const res = await axios.get(`http://127.0.0.1:8888/stock/${dataId}`)
-                setSingleData(res.data)
-            } catch (error) {
-                console.log(error)
-            }
-
-        }
-        fetchData()
+        slDataHandler(dataId)
     }, [dataId])
+
 
     useEffect(() => {
         const fetchData = async () => {
