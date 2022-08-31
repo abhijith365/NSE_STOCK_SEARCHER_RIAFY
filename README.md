@@ -1,7 +1,5 @@
 
-
-https://user-images.githubusercontent.com/63362359/186978918-cc5278ce-93a6-4f4e-839b-1d16866f8078.mp4
-
+https://user-images.githubusercontent.com/63362359/187503153-ed4b2691-2e05-4d26-92bb-1099f870e5b7.mp4
 
 # NSE_STOCK_SEARCHER_RIAFY
 a simple application for searching nse data from database
