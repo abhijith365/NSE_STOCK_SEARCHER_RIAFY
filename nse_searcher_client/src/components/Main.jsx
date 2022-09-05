@@ -54,7 +54,7 @@ export const Main = () => {
                 {inpData && <SearchItems inpData={inpData} slDataHandler={slDataHandler} />}
 
                 {/* for single data */}
-                {dataId && <Table data={dataId} />}
+                {dataId && <Table dataId={dataId} />}
 
 
             </div>
